@@ -1,0 +1,56 @@
+.singleContent {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 5px;
+  margin: 5px 0;
+  background-color: #282c34;
+  border-radius: 10px;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+.singleContent:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.singleContent::after {
+  content: attr(rank);
+  width: 70px;
+  height: 15px;
+  background-color: orange;
+  position: absolute;
+  right: -10px;
+  top: -5px;
+  transform: translate(8px, 5px) rotate(30deg);
+  text-align: center;
+  line-height: 15px;
+  font-weight: 700;
+  padding: 2px 0;
+}
+
+@media (max-width: 550px) {
+  .singleContent {
+    width: 45%;
+  }
+}
+
+.poster {
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+  padding: 5px 0;
+  width: 100%;
+  font-size: 17px;
+}
+
+.subTitle {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3px;
+  padding: 0 2px;
+}
